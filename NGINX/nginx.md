@@ -282,3 +282,94 @@ If you want, I can also make a **super condensed one-page version** with just co
 
 Do you want me to make that?
 
+
+
+Perfect! Here’s a **super condensed one-page Nginx command cheat sheet**—all commands, no extra explanations:
+
+---
+
+# **Nginx Quick Command Cheat Sheet**
+
+### **Service Management**
+
+```bash
+sudo systemctl start nginx
+sudo systemctl stop nginx
+sudo systemctl restart nginx
+sudo systemctl reload nginx
+sudo systemctl status nginx
+sudo systemctl enable nginx
+sudo systemctl disable nginx
+```
+
+### **Configuration**
+
+```bash
+sudo nginx -t
+sudo nginx -s reload
+sudo nginx -s stop
+sudo nginx -s quit
+sudo nginx -v
+sudo nginx -V
+```
+
+### **File Locations**
+
+```
+Main config: /etc/nginx/nginx.conf
+Sites available: /etc/nginx/sites-available/
+Sites enabled: /etc/nginx/sites-enabled/
+Web root: /var/www/html/
+Logs: /var/log/nginx/
+```
+
+### **Website Setup**
+
+```bash
+sudo mkdir -p /var/www/example.com/html
+sudo chown -R $USER:$USER /var/www/example.com/html
+sudo chmod -R 755 /var/www/example.com
+sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+### **Logs & Debugging**
+
+```bash
+tail -f /var/log/nginx/access.log
+tail -f /var/log/nginx/error.log
+```
+
+### **Network & Connections**
+
+```bash
+sudo netstat -tulpn | grep nginx
+sudo ss -tulpn | grep nginx
+curl -I http://localhost
+```
+
+### **Security**
+
+```bash
+sudo ufw allow 'Nginx Full'
+sudo ufw status
+sudo apt install certbot python3-certbot-nginx
+sudo certbot --nginx
+```
+
+### **Maintenance**
+
+```bash
+sudo systemctl reload nginx
+sudo systemctl restart nginx
+sudo nginx -t
+sudo du -sh /var/log/nginx/*
+```
+
+---
+
+If you want, I can also make a **tiny visual cheat sheet PNG** with all these commands, perfectly formatted to keep on your desk or as a quick reference in your terminal.
+
+Do you want me to do that?
+
